@@ -17,4 +17,4 @@
 4.
 
 ## Sơ đồ UML:
-![Sơ đồ UML](Nhom-02/UML.drawio.png)
+![Sơ đồ UML](./UML.drawio.png)
