@@ -18,17 +18,17 @@
 #### 1. Quản lý người dùng:
 - Người dùng có thể đăng ký, đăng nhập, và cập nhật hồ sơ cá nhân.
 - Hỗ trợ phân quyền giữa User và Admin để quản lý hệ thống.
-### 2. Quản lý bài viết (Post):
+#### 2. Quản lý bài viết (Post):
 - Người dùng có thể tạo bài viết, chỉnh sửa nội dung và xóa bài viết của mình.
 - Mỗi bài viết được liên kết với danh mục (Category) để phân loại dễ dàng.
-### 3. Quản lý danh mục (Category):
+#### 3. Quản lý danh mục (Category):
 - Admin có thể thêm, chỉnh sửa, hoặc xóa danh mục.
 - Mỗi danh mục chứa các bài viết thuộc về chủ đề cụ thể.
-### 4. Tương tác bài viết và bình luận (Post và Comment):
+#### 4. Tương tác bài viết và bình luận (Post và Comment):
 - Người dùng có thể bình luận dưới các bài viết, thêm điểm đánh giá (upvote/downvote) và trả lời bình luận của người khác.
-### 5. Quản lý mối quan hệ giữa người dùng và nội dung (UserPost, UserComment):
+#### 5. Quản lý mối quan hệ giữa người dùng và nội dung (UserPost, UserComment):
 - Theo dõi thời gian người dùng đăng bài hoặc bình luận để tạo lịch sử hoạt động.
-### 6. Phân loại bài viết và danh mục (PostCategory):
+#### 6. Phân loại bài viết và danh mục (PostCategory):
 - Hỗ trợ liên kết bài viết với nhiều danh mục, phục vụ tìm kiếm và tổ chức nội dung.
 
 ## Sơ đồ UML:
