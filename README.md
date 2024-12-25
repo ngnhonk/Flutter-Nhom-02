@@ -15,3 +15,6 @@
 2.
 3.
 4.
+
+## Sơ đồ UML:
+![Sơ đồ UML](repository/UML.drawio.png)
