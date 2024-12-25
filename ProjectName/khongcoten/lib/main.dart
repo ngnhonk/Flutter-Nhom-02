@@ -126,6 +126,118 @@
 
 import 'package:flutter/material.dart';
 
+class User {
+  int user_id;
+  String username;
+  String password;
+  String email;
+
+  User(this.user_id, this.username, this.password, this.email);
+
+  void login() {
+
+  }
+
+  void logout() {
+
+  }
+
+  void updateProfile() {
+
+  }
+}
+
+class Admin extends User {
+  int admin_id;
+  String role;
+
+  Admin(int user_id, String username, String password, String email, this.admin_id, this.role)
+      : super(user_id, username, password, email);
+
+  void manageUsers() {
+
+  }
+
+  void deletePost() {
+
+  }
+
+  void approvePost() {
+
+  }
+}
+
+class Post {
+  int post_id;
+  String title;
+  String content;
+  int votePoint;
+  User author;
+
+  Post(this.post_id, this.title, this.content, this.votePoint, this.author);
+
+  void addComment() {
+
+  }
+
+  void deleteComment() {
+
+  }
+
+  void upVote() {
+
+  }
+
+  void downVote() {
+
+  }
+}
+
+class Comment {
+  int comment_id;
+  String content;
+  int votePoint;
+  User user;
+
+  Comment(this.comment_id, this.content, this.votePoint, this.user);
+
+  void addComment() {
+
+  }
+
+  void deleteComment() {
+
+  }
+
+  void upVote() {
+
+  }
+
+  void downVote() {
+
+  }
+}
+
+class Category {
+  int category_id;
+  String name;
+  String description;
+
+  Category(this.category_id, this.name, this.description);
+
+  void addCategory() {
+
+  }
+
+  void deleteCategory() {
+
+  }
+
+  void editCategory() {
+
+  }
+}
+
 void main() {
   runApp(const MyApp());
 }
