@@ -31,5 +31,6 @@
 #### 6. Phân loại bài viết và danh mục (PostCategory):
 - Hỗ trợ liên kết bài viết với nhiều danh mục, phục vụ tìm kiếm và tổ chức nội dung.
 
-## Sơ đồ UML:
+## Structural Diagram:
+### Class Diagram
 ![Sơ đồ UML](./UML.drawio.png)
