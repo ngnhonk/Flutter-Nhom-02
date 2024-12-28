@@ -32,5 +32,4 @@
 - Hỗ trợ liên kết bài viết với nhiều danh mục, phục vụ tìm kiếm và tổ chức nội dung.
 
 ## Structural Diagram:
-### Class Diagram
 ![Sơ đồ UML](./UML.drawio.png)
