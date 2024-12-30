@@ -46,7 +46,7 @@
 ![Diễn đàn](./img/diendan.jpg)
 
 ### Tài khoản:
-![Tài khoản](./img/tintuc.jpg)
+![Tài khoản](./img/taikhoan.jpg)
 
 ### Giao diện mô phỏng điện thoại android:
 ![Android Emulator](./img/android_emu.png)
