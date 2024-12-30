@@ -40,10 +40,13 @@
 ![Trang chủ](./img/trangchu.jpg)
 
 ### Tin tức:
-![Trang chủ](./img/tintuc.jpg)
+![Tin tức](./img/tintuc.jpg)
 
 ### Diễn đàn:
-![Trang chủ](./img/diendan.jpg)
+![Diễn đàn](./img/diendan.jpg)
 
 ### Tài khoản:
-![Trang chủ](./img/tintuc.jpg)
+![Tài khoản](./img/tintuc.jpg)
+
+### Giao diện mô phỏng điện thoại android:
+![Android Emulator](./img/android_emu.png)
