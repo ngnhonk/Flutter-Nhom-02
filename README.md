@@ -32,6 +32,18 @@
 - Hỗ trợ liên kết bài viết với nhiều danh mục, phục vụ tìm kiếm và tổ chức nội dung.
 
 ## Structural Diagram:
-![Sơ đồ UML](./UML.drawio.png)
+![Sơ đồ UML](./img/UML.drawio.png)
 
-##Giao diện App
+## Giao diện App
+
+### Trang chủ:
+![Trang chủ](./img/trangchu.jpg)
+
+### Tin tức:
+![Trang chủ](./img/tintuc.jpg)
+
+### Diễn đàn:
+![Trang chủ](./img/diendan.jpg)
+
+### Tài khoản:
+![Trang chủ](./img/tintuc.jpg)
