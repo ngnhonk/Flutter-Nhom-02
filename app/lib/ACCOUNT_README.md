@@ -472,9 +472,5 @@ class ForumDetailScreen extends StatelessWidget {
 ```
 
 
-Yêu cầu Nộp bài:
-
-Chụp ảnh màn hình Mobile App (trên web hoặc trên ios hoặc trên Android)
-Code chính của class User, Object của class User, và main.dart của App.
-Link Github đến repo của code vừa viết.
-Link ReadMe về code chính (như câu 2) và ảnh chụp màn hình 05 bản ghi người dùng trên App (như câu 1).
+###Ảnh chụp màn hình 5 bản ghi người dùng
+![5user](./img/5user.jpg)
