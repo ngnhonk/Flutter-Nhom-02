@@ -31,20 +31,10 @@ Viết lớp (class) có tên `User` bằng ngôn ngữ Dart gồm thông tin sa
 ### `main.dart`
 Chứa toàn bộ mã nguồn cho ứng dụng. Các phần chính bao gồm:
 1. **Lớp `User`**: Mô tả thông tin người dùng.
-2. **Màn hình `UserGridScreen`**:
+2. **Màn hình `NewScreen`**:
    - Hiển thị danh sách người dùng dạng lưới.
    - Sử dụng `GridView.builder` để tạo giao diện động từ danh sách người dùng.
-3. **Hàm `main()`**: Điểm bắt đầu của ứng dụng, khởi chạy màn hình `UserGridScreen`.
-
-## Hướng dẫn chạy ứng dụng
-
-1. **Cài đặt môi trường**:
-   - Đảm bảo đã cài đặt Flutter trên máy.
-   - Chạy lệnh `flutter doctor` để kiểm tra cấu hình.
-
-2. **Chạy ứng dụng**:
-   - Tải mã nguồn vào thư mục dự án Flutter.
-   - Chạy lệnh `flutter run` để khởi động ứng dụng trên thiết bị giả lập hoặc thực.
+3. **Hàm `main()`**: Điểm bắt đầu của ứng dụng, khởi chạy màn hình `UNewScreen`.
 
 ## Kết quả mong đợi
 
@@ -54,4 +44,6 @@ Chứa toàn bộ mã nguồn cho ứng dụng. Các phần chính bao gồm:
   - `Password`
   - `Role`
 
+## Ảnh minh họa
+![Grid](../../img/GridViewInTinTuc.png)
 
