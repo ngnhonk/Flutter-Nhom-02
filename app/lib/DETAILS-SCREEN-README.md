@@ -17,15 +17,11 @@
    ),
 
 2. Phần thông tin để hiển thị các thông tin của object đã tạo:
-   Text(
-   'Username: ${user.username}',
-   style: const TextStyle(
-   fontWeight: FontWeight.bold,
-   ),
-   ),
+   Text('Username: ${user.username}',),
    Text('Role: ${user.role}'),
 
 - Tại đây có thể truy cập được tên của object thông qua các dot notation như bình thường.
 
 ### main.dart:
+
 1. Class HomeScreen trong main.dart ban đầu được xây dựng với ý tưởng để gọi tới các ForumDetailScreen với ID tăng dần. Nhưng trong phần này em đã sửa đổi itemCount = 1 để chỉ hiển thị ra 1 phần duy nhất. tại trang chủ khi bấm vào "Cửa sổ hiển thị User 1" thì sẽ dẫn tới phần view của class ForumDetailScreen.
