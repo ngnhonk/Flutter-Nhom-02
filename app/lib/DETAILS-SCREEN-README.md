@@ -1,4 +1,3 @@
-Dưới đây là phiên bản đã được format tốt hơn để hiển thị trên GitHub: 
 
 ```markdown
 # Về các phần code
