@@ -1,7 +1,7 @@
 ## Class User
-```markdown
 
 1. Định nghĩa `class User` theo yêu cầu của đề bài, bao gồm: `username`, `password`, và `role`.
+```markdown
 ```dart
 class User {
   String username;
