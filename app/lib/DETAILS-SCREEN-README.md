@@ -74,6 +74,14 @@ class User {
 
   User(this.username, this.password, this.role);
 }
+
+ final List<User> users = [
+   User('Viet Hung', 'pass1', 'Admin'),
+   User('user2', 'pass2', 'User'),
+   User('user3', 'pass3', 'User'),
+   User('user4', 'pass4', 'User'),
+   User('user5', 'pass5', 'Guest'),
+ ];
 ```
 
 ### ForumDetailScreen
