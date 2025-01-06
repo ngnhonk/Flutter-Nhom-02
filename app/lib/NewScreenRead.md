@@ -10,7 +10,7 @@ Viết lớp (class) có tên `User` bằng ngôn ngữ Dart gồm thông tin sa
 1. Nhập vào 5 bản ghi thông tin người dùng. (3 điểm)
 2. Hiển thị trên Mobile App 05 bản ghi người dùng theo dạng `GridView`. (4 điểm)
 
-## Hướng dẫn thực hiện
+## Thực hiện
 
 ### Câu 1: Tạo lớp `User`
 - Lớp `User` được định nghĩa với ba thuộc tính:
