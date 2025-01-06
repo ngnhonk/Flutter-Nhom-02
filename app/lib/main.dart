@@ -197,32 +197,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return ListTile(
-          leading: const Icon(Icons.article),
-          title: Text('Bài viết tin tức ${index + 1}'),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => NewsDetailScreen(newsId: index + 1),
-              ),
-            );
-          },
-        );
-      },
-    );
-  }
-}
-
 class ForumScreen extends StatelessWidget {
   const ForumScreen({super.key});
 
