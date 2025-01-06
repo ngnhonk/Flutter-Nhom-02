@@ -7,7 +7,7 @@
 3. Phạm Quang Khải - 22010028
 4. Giảng viên hướng dẫn : cô Nguyễn Lệ Thu
 
-# Dự án: Hệ thống tin tức và diễn đàn trên nền tảng Mobile
+# Dự án: Hệ thống tin tức và diễn đàn
 
 ## Giới thiệu
 ### Mục tiêu của dự án:
@@ -32,4 +32,21 @@
 - Hỗ trợ liên kết bài viết với nhiều danh mục, phục vụ tìm kiếm và tổ chức nội dung.
 
 ## Structural Diagram:
-![Sơ đồ UML](./UML.drawio.png)
+![Sơ đồ UML](./img/UML.drawio.png)
+
+## Giao diện App
+
+### Trang chủ:
+![Trang chủ](./img/trangchu.jpg)
+
+### Tin tức:
+![Tin tức](./img/tintuc.jpg)
+
+### Diễn đàn:
+![Diễn đàn](./img/diendan.jpg)
+
+### Tài khoản:
+![Tài khoản](./img/taikhoan.jpg)
+
+### Giao diện mô phỏng điện thoại android:
+![Android Emulator](./img/android_emu.png)
