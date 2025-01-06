@@ -4,6 +4,22 @@ void main() {
   runApp(MyApp());
 }
 
+class User {
+  String username;
+  String password;
+  String role;
+
+  User(this.username, this.password, this.role);
+}
+
+final List<User> users = [
+  User('Nguyen Viet Hung', 'pass1', 'Admin'),
+  User('user2', 'pass2', 'User'),
+  User('user3', 'pass3', 'User'),
+  User('user4', 'pass4', 'User'),
+  User('user5', 'pass5', 'Guest'),
+];
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -117,7 +133,8 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NewsDetailScreen(newsId: index + 1),
+                        builder: (context) =>
+                            NewsDetailScreen(newsId: index + 1),
                       ),
                     );
                   },
@@ -139,7 +156,8 @@ class HomeScreen extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               'Tin tức ${index + 1}',
-                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                              style: const TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.w500),
                             ),
                           ),
                         ],
@@ -172,14 +190,15 @@ class HomeScreen extends StatelessWidget {
                   backgroundColor: Colors.blueAccent,
                   child: Icon(Icons.forum, color: Colors.white),
                 ),
-                title: Text('Chủ đề thảo luận ${index + 1}'),
-                subtitle: const Text('Nội dung mô tả ngắn gọn...'),
+                title: Text('Cửa sổ hiển thị User ${index + 1}'),
+                subtitle: const Text('Hiển thị User dưới dạng GridView'),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ForumDetailScreen(forumId: index + 1),
+                      builder: (context) =>
+                          ForumDetailScreen(forumId: index + 1),
                     ),
                   );
                 },
@@ -305,10 +324,46 @@ class ForumDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chi tiết Chủ đề $forumId'),
+        title: Text('GridView hiển thị User $forumId:'),
       ),
-      body: Center(
-        child: Text('Nội dung chi tiết của Chủ đề $forumId'),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 8.0,
+            mainAxisSpacing: 8.0,
+            childAspectRatio: 3 / 2,
+          ),
+          itemCount: users.length,
+          itemBuilder: (context, index) {
+            final user = users[index];
+            return Card(
+              elevation: 4.0,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.account_circle,
+                      size: 40,
+                      color: Colors.blueAccent,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Username: ${user.username}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text('Role: ${user.role}'),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
