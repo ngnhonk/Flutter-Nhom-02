@@ -474,4 +474,4 @@ class ForumDetailScreen extends StatelessWidget {
 
 
 ### Ảnh chụp màn hình 5 bản ghi người dùng
-![5user](./img/5user.jpg)
+![Imgur](https://imgur.com/EWqMg6U.png)
