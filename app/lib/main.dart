@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app/details_screen.dart';
 import 'package:app/account_screen.dart';
+import 'package:app/news_screen.dart';
 
 void main() {
   runApp(const MyApp());

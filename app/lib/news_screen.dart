@@ -12,8 +12,8 @@ class User {
   });
 }
 
-class UserGridScreen extends StatelessWidget {
-  const UserGridScreen({super.key});
+class NewsScreen extends StatelessWidget {
+  const NewsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +76,6 @@ class UserGridScreen extends StatelessWidget {
 
 void main() {
   runApp(const MaterialApp(
-    home: UserGridScreen(),
+    home: NewsScreen(),
   ));
 }
