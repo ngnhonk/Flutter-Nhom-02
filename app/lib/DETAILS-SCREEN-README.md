@@ -26,6 +26,10 @@
 
 1. Class HomeScreen trong main.dart ban đầu được xây dựng với ý tưởng để gọi tới các ForumDetailScreen với ID tăng dần. Nhưng trong phần này em đã sửa đổi itemCount = 1 để chỉ hiển thị ra 1 phần duy nhất. tại trang chủ khi bấm vào "Cửa sổ hiển thị User 1" thì sẽ dẫn tới phần view của class ForumDetailScreen.
 
+## Hình ảnh:
+### Grid View:
+![GridView](../../img/GridView.png)
+![GridView](../../img/HomePage-User.png)
 ## Các phần code chính:
 ### Class User:
 class User {
@@ -219,3 +223,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

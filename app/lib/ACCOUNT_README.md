@@ -29,7 +29,8 @@ Nhập vào 5 bản ghi thông tin người dùng. (3 điểm)
 
 Hiển thị trên Mobile App 05 bản ghi người dùng theo dạng GridView. (4 điểm)
 
-### Đoạn code của câu 2: 
+
+### Đoạn code của câu 2: (Em hiển thị 5 người dùng ở trang Account Tài khoản người dùng trong app của chúng em, em đã viết code vào class Account Screen)
 ```dart
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -473,4 +474,4 @@ class ForumDetailScreen extends StatelessWidget {
 
 
 ### Ảnh chụp màn hình 5 bản ghi người dùng
-![5user](./img/5user.jpg)
+![Imgur](https://imgur.com/EWqMg6U.png)
