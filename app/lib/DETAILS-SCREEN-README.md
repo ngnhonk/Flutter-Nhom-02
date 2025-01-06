@@ -1,37 +1,67 @@
-## Về các phần code:
+Dưới đây là phiên bản đã được format tốt hơn để hiển thị trên GitHub: 
 
-### Class User:
+```markdown
+# Về các phần code
 
-1. Định nghĩa class User theo yêu cầu của đề bài bao gồm username, password và role.
+## Class User
 
-2. Khởi tạo mảng các User thông qua "final List<User> users = ..."
+1. Định nghĩa `class User` theo yêu cầu của đề bài, bao gồm: `username`, `password`, và `role`.
+2. Khởi tạo danh sách các User thông qua:
+   ```dart
+   final List<User> users = [
+     User('Viet Hung', 'pass1', 'Admin'),
+     User('user2', 'pass2', 'User'),
+     User('user3', 'pass3', 'User'),
+     User('user4', 'pass4', 'User'),
+     User('user5', 'pass5', 'Guest'),
+   ];
+   ```
 
-### Class ForumDetailScreen:
+## Class ForumDetailScreen
 
-1. Class ForumDetailScreen extends StatelessWidge: để tạo layout cho phần hiển thị thông tin của các user đã khởi tạo với GridView. Trong đó phần thông số của GridView:
+1. `ForumDetailScreen` là một `StatelessWidget` để tạo layout hiển thị thông tin của các User với `GridView`.  
+   Các thông số của `GridView`:
+   ```dart
    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-   crossAxisCount: 2, // điều chỉnh cột
-   crossAxisSpacing: 8.0, // kc cột dọc
-   mainAxisSpacing: 8.0, // kc cột ngang
-   childAspectRatio: 3 / 2, // tỉ lệ 3/2 cho thẻ child
-   ),
+     crossAxisCount: 2, // Số cột
+     crossAxisSpacing: 8.0, // Khoảng cách giữa các cột
+     mainAxisSpacing: 8.0, // Khoảng cách giữa các hàng
+     childAspectRatio: 3 / 2, // Tỉ lệ chiều rộng và chiều cao
+   )
+   ```
 
-2. Phần thông tin để hiển thị các thông tin của object đã tạo:
-   Text('Username: ${user.username}',),
+2. Hiển thị thông tin User:
+   ```dart
+   Text('Username: ${user.username}'),
    Text('Role: ${user.role}'),
+   ```
 
-- Tại đây có thể truy cập được tên của object thông qua các dot notation như bình thường.
+3. Icon đại diện cho User:
+   ```dart
+   Icon(
+     Icons.account_circle,
+     size: 40,
+     color: Colors.blueAccent,
+   )
+   ```
 
-### main.dart:
+## main.dart
 
-1. Class HomeScreen trong main.dart ban đầu được xây dựng với ý tưởng để gọi tới các ForumDetailScreen với ID tăng dần. Nhưng trong phần này em đã sửa đổi itemCount = 1 để chỉ hiển thị ra 1 phần duy nhất. tại trang chủ khi bấm vào "Cửa sổ hiển thị User 1" thì sẽ dẫn tới phần view của class ForumDetailScreen.
+1. Class `HomeScreen` được xây dựng để dẫn tới các `ForumDetailScreen` với ID tăng dần.  
+   Tuy nhiên, phần này đã được sửa đổi để `itemCount = 1`, hiển thị duy nhất một phần tại trang chủ.  
 
-## Hình ảnh:
-### Grid View:
-![GridView](../../img/GridView.png)
-![GridView](../../img/HomePage-User.png)
-## Các phần code chính:
-### Class User:
+2. Khi nhấn vào `"Cửa sổ hiển thị User 1"`, ứng dụng sẽ điều hướng đến `ForumDetailScreen`.
+
+## Hình ảnh
+
+### Grid View
+![GridView](../../img/GridView.png)  
+![HomePage-User](../../img/HomePage-User.png)
+
+## Các phần code chính
+
+### Class User
+```dart
 class User {
   String username;
   String password;
@@ -39,17 +69,10 @@ class User {
 
   User(this.username, this.password, this.role);
 }
+```
 
-### Khởi tạo users: 
-final List<User> users = [
-  User('Viet Hung', 'pass1', 'Admin'),
-  User('user2', 'pass2', 'User'),
-  User('user3', 'pass3', 'User'),
-  User('user4', 'pass4', 'User'),
-  User('user5', 'pass5', 'Guest'),
-];
-
-### ForumDetailScreen: 
+### ForumDetailScreen
+```dart
 class ForumDetailScreen extends StatelessWidget {
   final int forumId;
 
@@ -103,8 +126,10 @@ class ForumDetailScreen extends StatelessWidget {
     );
   }
 }
+```
 
-### HomeScreen:
+### HomeScreen
+```dart
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -223,4 +248,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
+```
+``` 
