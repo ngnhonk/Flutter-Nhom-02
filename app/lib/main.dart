@@ -183,7 +183,7 @@ class HomeScreen extends StatelessWidget {
           ListView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount: 5,
+            itemCount: 1,
             itemBuilder: (context, index) {
               return ListTile(
                 leading: const CircleAvatar(
