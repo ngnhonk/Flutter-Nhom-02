@@ -124,8 +124,7 @@ class LayoutScreen extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
-                  '../../img/android_emu.png'
-                  ,
+                  'assets/anh.jpg',
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: 200,
