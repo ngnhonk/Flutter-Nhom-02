@@ -75,7 +75,7 @@ class LayoutScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Thời gian chuẩn bị
+                      // Thời gian đăng bài
                       Column(
                         children: const [
                           Icon(Icons.access_time, color: Colors.green),
@@ -90,7 +90,7 @@ class LayoutScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      // Thời gian nấu
+                      // Ngày đăng
                       Column(
                         children: const [
                           Icon(Icons.access_time_filled, color: Colors.green),
@@ -101,7 +101,7 @@ class LayoutScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      // Số người ăn
+                      // Số người xem
                       Column(
                         children: const [
                           Icon(Icons.person, color: Colors.green),
