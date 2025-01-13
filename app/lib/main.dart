@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:app/details_screen.dart';
 import 'package:app/account_screen.dart';
 import 'package:app/news_screen.dart';
+import 'package:app/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     const NewsScreen(),
     const ForumScreen(),
     const AccountScreen(),
+    const LayoutScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -70,6 +72,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Tài khoản',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_box),
+            label: 'Layout',
           ),
         ],
         selectedItemColor: Colors.blueAccent,
