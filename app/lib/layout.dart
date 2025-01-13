@@ -124,7 +124,7 @@ class LayoutScreen extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
-                  'assets/anh.jpg',
+                  'assets/images/anh.jpg',
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: 200,
