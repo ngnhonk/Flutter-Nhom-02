@@ -39,7 +39,7 @@ class LayoutScreen extends StatelessWidget {
                 children: [
                   // Tiêu đề
                   const Text(
-                    'Strawberry Pavlova',
+                    'Khóa học C/C++',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class LayoutScreen extends StatelessWidget {
                   const SizedBox(height: 8),
                   // Đoạn mô tả
                   const Text(
-                    'Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova. Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.',
+                    'Học môn C/C++ với thầy Vinh là một trải nghiệm đáng nhớ và đầy giá trị. Phong cách giảng dạy của thầy rất logic, dễ hiểu và bám sát các vấn đề thực tế, giúp sinh viên không chỉ nắm chắc lý thuyết mà còn áp dụng hiệu quả vào thực hành.',
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   const SizedBox(height: 16),
@@ -65,7 +65,7 @@ class LayoutScreen extends StatelessWidget {
                       const SizedBox(width: 8),
                       // Số lượng đánh giá
                       const Text(
-                        '170 Reviews',
+                        '172 Reviews',
                         style: TextStyle(fontSize: 12, color: Colors.black54),
                       ),
                     ],
@@ -75,7 +75,7 @@ class LayoutScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Thời gian chuẩn bị
+                      // Thời gian đăng bài
                       Column(
                         children: const [
                           Icon(Icons.access_time, color: Colors.green),
@@ -84,29 +84,29 @@ class LayoutScreen extends StatelessWidget {
                                 4, // Nếu cần thêm khoảng cách, có thể chỉnh giá trị `height`.
                           ),
                           Text(
-                            '25 min',
+                            '23 hours ago',
                             style:
                                 TextStyle(fontSize: 12, color: Colors.black54),
                           ),
                         ],
                       ),
-                      // Thời gian nấu
+                      // Ngày đăng
                       Column(
                         children: const [
                           Icon(Icons.access_time_filled, color: Colors.green),
                           Text(
-                            '1 hr',
+                            '13/01/2025',
                             style:
                                 TextStyle(fontSize: 12, color: Colors.black54),
                           ),
                         ],
                       ),
-                      // Số người ăn
+                      // Số người xem
                       Column(
                         children: const [
                           Icon(Icons.person, color: Colors.green),
                           Text(
-                            '4-6',
+                            '571',
                             style:
                                 TextStyle(fontSize: 12, color: Colors.black54),
                           ),
