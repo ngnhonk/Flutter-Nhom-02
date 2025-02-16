@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import '../models/task.dart';
 
 class TaskService {
   final CollectionReference _taskCollection =
-  FirebaseFirestore.instance.collection('tasks');
+      FirebaseFirestore.instance.collection('tasks');
 
   // get task list
   Stream<List<Task>> getTasks() {
@@ -15,6 +16,16 @@ class TaskService {
   // create a new task
   Future<void> addTask(Task task) async {
     await _taskCollection.add(task.toMap());
+  }
+
+  // update task
+  Future<void> updateTask(
+      String id, String newTitle, String newDescription) async {
+    await _taskCollection.doc(id).update({
+      'title': newTitle,
+      'description': newDescription,
+      'updatedAt': Timestamp.now(),
+    });
   }
 
   // update task status
