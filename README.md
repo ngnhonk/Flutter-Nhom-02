@@ -1,8 +1,8 @@
 # Nhóm 02
 ## Thành viên của nhóm:
 1. [Nguyễn Thị Phương Anh - 22010079](https://github.com/phanhh122)
-2. Nguyễn Việt Hùng - 22010323
-3. Phạm Quang Khải - 22010028
+2. [Nguyễn Việt Hùng - 22010323](https://github.com/ngnhonk)
+3. [Phạm Quang Khải - 22010028]
 4. Giảng viên hướng dẫn : cô Nguyễn Lệ Thu
 
 # Dự án: Ứng dụng quản lý công việc Task Manager
