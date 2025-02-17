@@ -25,6 +25,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi.
 
 ## Structural Diagram 
+![Task Manager UML](img/TaskManager.drawio.png)
 
 ## Công nghệ sử dụng
 - Ngôn ngữ lập trình: Dart
@@ -38,23 +39,11 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
    ```
 2. Cài đặt dependencies
    ```sh
-   npm install
+   flutter pub get
    ```
-3. Cấu hình Firebase
-   - Tạo một dự án Firebase.
-   - Kích hoạt Firestore Database.
-   - Lấy thông tin cấu hình và thêm vào file `.env`:
-   ```env
-   REACT_APP_FIREBASE_API_KEY=your_api_key
-   REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-   REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-   REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-   REACT_APP_FIREBASE_APP_ID=your_app_id
-   ```
-4. **Chạy ứng dụng**
+3. **Chạy ứng dụng**
    ```sh
-   npm start
+   flutter run
    ```
 
 ## Giao diện App 
