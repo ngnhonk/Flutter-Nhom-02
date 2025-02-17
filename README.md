@@ -1,6 +1,6 @@
 # Nhóm 02
 ## Thành viên của nhóm:
-1. Nguyễn Thị Phương Anh - 22010079
+1. [Nguyễn Thị Phương Anh - 22010079](https://github.com/phanhh122)
 2. Nguyễn Việt Hùng - 22010323
 3. Phạm Quang Khải - 22010028
 4. Giảng viên hướng dẫn : cô Nguyễn Lệ Thu
@@ -41,7 +41,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
    ```sh
    flutter pub get
    ```
-3. **Chạy ứng dụng**
+3. Chạy ứng dụng
    ```sh
    flutter run
    ```
