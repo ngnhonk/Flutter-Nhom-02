@@ -10,6 +10,11 @@
 ## Giới thiệu
 Task Manager là một ứng dụng quản lý công việc đơn giản, giúp người dùng tạo, chỉnh sửa, xóa và theo dõi các nhiệm vụ hàng ngày. Ứng dụng hỗ trợ phân loại công việc và ghi chú nhanh bằng Sticky Notes.
 
+## Mục tiêu dự án
+- Cung cấp một công cụ đơn giản và hiệu quả giúp người dùng quản lý công việc hàng ngày.
+- Hỗ trợ phân loại công việc để tăng tính tổ chức và ưu tiên.
+- Cải thiện trải nghiệm người dùng với giao diện thân thiện và dễ sử dụng.
+
 ## Tính năng chính
 - **Tạo công việc mới**: Người dùng có thể nhập tên công việc, mô tả chi tiết, thời gian thực hiện và thêm công việc vào danh sách quản lý.
 - **Chỉnh sửa công việc**: Người dùng có thể cập nhật thông tin công việc bất cứ lúc nào để đảm bảo thông tin chính xác.
@@ -18,7 +23,6 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Phân loại công việc theo danh mục**: Người dùng có thể tạo và quản lý danh mục công việc (Ví dụ: Cá nhân, Công việc, Học tập) giúp sắp xếp và ưu tiên nhiệm vụ hợp lý hơn.
 - **Ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng, ý tưởng nhanh mà không cần tạo công việc chi tiết.
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi.
-- **Giao diện thân thiện, dễ sử dụng**: Ứng dụng được thiết kế trực quan, giúp người dùng thao tác dễ dàng trên thiết bị di động và máy tính bảng.
 
 ## Structural Diagram 
 
@@ -55,6 +59,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 
 ## Giao diện App 
 thêm giao diện 
+
 ## Hướng dẫn sử dụng
 - **Thêm công việc mới**: Nhấn "Create New Task" và nhập thông tin.
 - **Chỉnh sửa công việc**: Nhấn biểu tượng ✏️ bên cạnh công việc.
