@@ -51,9 +51,9 @@ thêm giao diện
 
 ## Hướng dẫn sử dụng
 - **Thêm công việc mới**: Nhấn "Create New Task" và nhập thông tin
-- **Chỉnh sửa công việc**: Nhấn biểu tượng ✏ bên cạnh công việc
-- **Xóa công việc**: Nhấn biểu tượng 🗑️ để xóa
-- **Hoàn thành công việc**: Nhấn vào biểu tượng ✅ để đánh dấu hoàn thành
+- **Chỉnh sửa công việc**: Nhấn biểu tượng chỉnh sửa bên cạnh công việc
+- **Xóa công việc**: Nhấn biểu tượng thùng rác để xóa
+- **Hoàn thành công việc**: Nhấn vào dấu tích để đánh dấu hoàn thành
 - **Sticky Notes**: Thêm các ghi chú nhanh từ giao diện chính
 - **Đăng nhập để lưu công việc**: Người dùng cần đăng nhập để đồng bộ dữ liệu trên nhiều thiết bị
 
