@@ -8,7 +8,7 @@
 # Dự án: Ứng dụng quản lý công việc Task Manager
 
 ## Giới thiệu
-Task Manager là một ứng dụng quản lý công việc đơn giản, giúp người dùng tạo, chỉnh sửa, xóa và theo dõi các nhiệm vụ hàng ngày. Ứng dụng hỗ trợ phân loại công việc và ghi chú nhanh bằng Sticky Notes.
+Task Manager là một ứng dụng quản lý công việc đơn giản, giúp người dùng tạo, chỉnh sửa, xóa và theo dõi các nhiệm vụ hàng ngày. Ứng dụng hỗ trợ đăng nhập để cá nhân hóa trải nghiệm người dùng và ghi chú nhanh bằng Sticky Notes. Đây là một công cụ hữu ích giúp người dùng tổ chức công việc một cách hiệu quả hơn.
 
 ## Mục tiêu dự án
 - Cung cấp một công cụ đơn giản và hiệu quả giúp người dùng quản lý công việc hàng ngày.
@@ -20,8 +20,8 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Chỉnh sửa công việc**: Người dùng có thể cập nhật thông tin công việc bất cứ lúc nào để đảm bảo thông tin chính xác.
 - **Xóa công việc**: Khi một công việc không còn cần thiết, người dùng có thể xóa khỏi danh sách.
 - **Đánh dấu hoàn thành**: Người dùng có thể đánh dấu công việc đã hoàn thành bằng cách nhấn vào biểu tượng ✅.
-- **Phân loại công việc theo danh mục**: Người dùng có thể tạo và quản lý danh mục công việc (Ví dụ: Cá nhân, Công việc, Học tập) giúp sắp xếp và ưu tiên nhiệm vụ hợp lý hơn.
 - **Ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng, ý tưởng nhanh mà không cần tạo công việc chi tiết.
+- **Đăng nhập và cá nhân hóa dữ liệu**: Người dùng có thể đăng nhập để lưu trữ và đồng bộ công việc trên nhiều thiết bị.
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi.
 
 ## Structural Diagram 
@@ -54,12 +54,11 @@ thêm giao diện
 - **Chỉnh sửa công việc**: Nhấn biểu tượng ✏️ bên cạnh công việc.
 - **Xóa công việc**: Nhấn biểu tượng 🗑️ để xóa.
 - **Hoàn thành công việc**: Nhấn vào biểu tượng ✅ để đánh dấu hoàn thành.
-- **Phân loại công việc**: Chọn danh mục khi tạo/chỉnh sửa công việc.
 - **Sticky Notes**: Thêm các ghi chú nhanh từ giao diện chính.
+- **Đăng nhập để lưu công việc**: Người dùng cần đăng nhập để đồng bộ dữ liệu trên nhiều thiết bị.
 
 ## Hạn chế và đề xuất cải thiện
 - Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn.
 - Chưa có chế độ đồng bộ thời gian thực: Hiện tại, dữ liệu chỉ cập nhật khi tải lại trang hoặc có hành động thêm/sửa/xóa. Có thể sử dụng Firebase Realtime Database để cải thiện.
-- Thiếu hỗ trợ đa người dùng: Hiện tại, ứng dụng chỉ phục vụ một người dùng. Nếu muốn mở rộng, có thể thêm chức năng đăng nhập và lưu công việc theo từng tài khoản.
 
 
