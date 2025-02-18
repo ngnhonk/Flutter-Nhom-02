@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'category_page.dart';
+import 'user_page.dart';
 import 'home_page.dart';
-import 'settings_page.dart';
+import 'notes_page.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -23,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = [
     HomePage(),
-    CategoryPage(),
-    SettingsPage(),
+    NotesPage(),
+    UserPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -43,8 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.category), label: 'Category'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
+          BottomNavigationBarItem(icon: Icon(Icons.note), label: 'Note'),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: 'User'),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,

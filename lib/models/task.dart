@@ -17,7 +17,7 @@ class Task {
     required this.updatedAt,
   });
 
-  // Chuyển đổi từ Firestore document sang Task object
+  // convert Firestore document -> Task object
   factory Task.fromFirestore(DocumentSnapshot doc) {
     Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
     return Task(
@@ -30,7 +30,7 @@ class Task {
     );
   }
 
-  // Chuyển đổi Task object thành Map để lưu vào Firestore
+  // convert Task object -> Map -> save to Firestore
   Map<String, dynamic> toMap() {
     return {
       'title': title,

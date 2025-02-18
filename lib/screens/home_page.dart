@@ -1,36 +1,92 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
+import '../models/note.dart';
 import '../models/task.dart';
+import '../services/note_service.dart';
 import '../services/task_sevice.dart';
 
-class HomePage extends StatelessWidget {
-  final TaskService _taskService = TaskService();
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
-  HomePage({super.key});
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final TaskService _taskService = TaskService();
+  SortOption _sortOption = SortOption.createdAt;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 24.0, bottom: 16.0),
-          child: Text(
-            "Task Manager",
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.w600,
-              color: Colors.black87,
-            ),
-            textAlign: TextAlign.center,
+
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          decoration: BoxDecoration(
+            color: Color(0xFF87CEFA),
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 0, bottom: 0),
+                child: Text(
+                  "Tasks",
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black87,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text("Sort by: ", style: TextStyle(fontSize: 16)),
+                    SizedBox(width: 8),
+                    DropdownButton<SortOption>(
+                      value: _sortOption,
+                      items: [
+                        DropdownMenuItem(
+                          value: SortOption.title,
+                          child: Text("Title"),
+                        ),
+                        DropdownMenuItem(
+                          value: SortOption.createdAt,
+                          child: Text("Created"),
+                        ),
+                        DropdownMenuItem(
+                          value: SortOption.isCompleted,
+                          child: Text("Status"),
+                        ),
+                      ],
+                      onChanged: (value) {
+                        if (value != null) {
+                          setState(() {
+                            _sortOption = value;
+                          });
+                        }
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
+
         Expanded(
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.grey[100], // Nền sáng nhẹ
+              color: Colors.grey[100],
               borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: StreamBuilder<List<Task>>(
               stream: _taskService.getTasks(),
               builder: (context, snapshot) {
@@ -42,13 +98,14 @@ class HomePage extends StatelessWidget {
                 }
                 if (!snapshot.hasData || snapshot.data!.isEmpty) {
                   return const Center(
-                      child: Text(
-                        "No tasks yet. Let's add one!",
-                        style: TextStyle(color: Colors.black54, fontSize: 16),
-                      ));
+                    child: Text(
+                      "No tasks yet. Let's add one!",
+                      style: TextStyle(color: Colors.black54, fontSize: 16),
+                    ),
+                  );
                 }
-
                 List<Task> tasks = snapshot.data!;
+                tasks = _taskService.sortTasks(tasks, _sortOption);
 
                 return ListView.builder(
                   itemCount: tasks.length + 1,
@@ -89,7 +146,8 @@ class HomePage extends StatelessWidget {
 
                     return Container(
                       margin: EdgeInsets.symmetric(vertical: 6.0),
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
@@ -110,7 +168,8 @@ class HomePage extends StatelessWidget {
                             decoration: task.isCompleted
                                 ? TextDecoration.lineThrough
                                 : TextDecoration.none,
-                            color: task.isCompleted ? Colors.grey : Colors.black87,
+                            color:
+                                task.isCompleted ? Colors.grey : Colors.black87,
                           ),
                         ),
                         subtitle: Text(
@@ -124,6 +183,11 @@ class HomePage extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             IconButton(
+                              icon: Icon(Icons.note_add),
+                              onPressed: () => _createNewNote(context, task.id),
+                            ),
+
+                            IconButton(
                               icon: Icon(Icons.edit, color: Colors.blueAccent),
                               onPressed: () => _editTask(context, task),
                             ),
@@ -132,16 +196,20 @@ class HomePage extends StatelessWidget {
                               onPressed: () => _taskService.deleteTask(task.id),
                             ),
                             GestureDetector(
-                              onTap: () => _taskService.toggleTaskCompletion(task.id, task.isCompleted),
+                              onTap: () => _taskService.toggleTaskCompletion(
+                                  task.id, task.isCompleted),
                               child: Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Icon(
-                                  task.isCompleted ? Icons.check_circle : Icons.radio_button_unchecked,
-                                  color: task.isCompleted ? Colors.green : Colors.grey,
+                                  task.isCompleted
+                                      ? Icons.check_circle
+                                      : Icons.radio_button_unchecked,
+                                  color: task.isCompleted
+                                      ? Colors.green
+                                      : Colors.grey,
                                 ),
                               ),
                             ),
-
                           ],
                         ),
                       ),
@@ -155,7 +223,6 @@ class HomePage extends StatelessWidget {
       ],
     );
   }
-
 
   // -------------------------- create task --------------------------
   void _createNewTask(BuildContext context, TaskService taskService) {
@@ -265,4 +332,57 @@ class HomePage extends StatelessWidget {
       },
     );
   }
+
+  // -------------------------- new note --------------------------
+
+  void _createNewNote(BuildContext context, String taskId) {
+    TextEditingController titleController = TextEditingController();
+    TextEditingController contentController = TextEditingController();
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Add new note"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: titleController,
+                decoration: InputDecoration(labelText: "Title"),
+              ),
+              TextField(
+                controller: contentController,
+                decoration: InputDecoration(labelText: "Content"),
+                maxLines: 3,
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text("Hủy"),
+            ),
+            TextButton(
+              onPressed: () async {
+                if (titleController.text.isNotEmpty &&
+                    contentController.text.isNotEmpty) {
+                  await NoteService().addNote(Note(
+                    id: "",
+                    taskId: taskId,
+                    title: titleController.text,
+                    content: contentController.text,
+                    createdAt: Timestamp.now(),
+                  ));
+                  Navigator.pop(context);
+                }
+              },
+              child: Text("Lưu"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 }
