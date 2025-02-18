@@ -1,52 +1,65 @@
 # Nhóm 02
+## Thành viên của nhóm:
+1. [Nguyễn Thị Phương Anh - 22010079](https://github.com/phanhh122)
+2. [Nguyễn Việt Hùng - 22010323](https://github.com/ngnhonk)
+3. [Phạm Quang Khải - 22010028](https://github.com/ka31504)
+4. Giảng viên hướng dẫn : cô [Nguyễn Lệ Thu](https://github.com/nglthu)
 
-## Thành viên của nhóm :
-
-1. Nguyễn Thị Phương Anh - 22010079
-2. Nguyễn Việt Hùng - 22010323
-3. Phạm Quang Khải - 22010028
-4. Giảng viên hướng dẫn : cô Nguyễn Lệ Thu
-
-# Dự án: Hệ thống tin tức và diễn đàn
+# Dự án: Ứng dụng quản lý công việc Task Manager
 
 ## Giới thiệu
-### Mục tiêu của dự án:
-- Cung cấp thông tin: Xây dựng một nền tảng giúp người dùng dễ dàng truy cập các bài viết và thông tin theo các danh mục khác nhau.
-- Kết nối cộng đồng: Tạo diễn đàn cho phép người dùng đăng bài viết, bình luận, và tương tác với các nội dung của nhau.
-- Quản lý và duy trì: Cho phép admin quản lý nội dung bài viết, phân loại danh mục, và thực hiện các tác vụ quản trị hệ thống.
-### Chức năng chính:
-#### 1. Quản lý người dùng:
-- Người dùng có thể đăng ký, đăng nhập, và cập nhật hồ sơ cá nhân.
-- Hỗ trợ phân quyền giữa User và Admin để quản lý hệ thống.
-#### 2. Quản lý bài viết (Post):
-- Người dùng có thể tạo bài viết, chỉnh sửa nội dung và xóa bài viết của mình.
-- Mỗi bài viết được liên kết với danh mục (Category) để phân loại dễ dàng.
-#### 3. Quản lý danh mục (Category):
-- Admin có thể thêm, chỉnh sửa, hoặc xóa danh mục.
-- Mỗi danh mục chứa các bài viết thuộc về chủ đề cụ thể.
-#### 4. Tương tác bài viết và bình luận (Post và Comment):
-- Người dùng có thể bình luận dưới các bài viết, thêm điểm đánh giá (upvote/downvote) và trả lời bình luận của người khác.
-#### 5. Quản lý mối quan hệ giữa người dùng và nội dung (UserPost, UserComment):
-- Theo dõi thời gian người dùng đăng bài hoặc bình luận để tạo lịch sử hoạt động.
-#### 6. Phân loại bài viết và danh mục (PostCategory):
-- Hỗ trợ liên kết bài viết với nhiều danh mục, phục vụ tìm kiếm và tổ chức nội dung.
+Task Manager là một ứng dụng quản lý công việc đơn giản, giúp người dùng tạo, chỉnh sửa, xóa và theo dõi các nhiệm vụ hàng ngày. Ứng dụng hỗ trợ phân loại công việc và ghi chú nhanh bằng Sticky Notes.
 
-## Structural Diagram:
-![Sơ đồ UML](./img/UML.drawio.png)
+## Mục tiêu dự án
+- Cung cấp một công cụ đơn giản và hiệu quả giúp người dùng quản lý công việc hàng ngày.
+- Hỗ trợ phân loại công việc để tăng tính tổ chức và ưu tiên.
+- Cải thiện trải nghiệm người dùng với giao diện thân thiện và dễ sử dụng.
 
-## Giao diện App
+## Tính năng chính
+- **Tạo công việc mới**: Người dùng có thể nhập tên công việc, mô tả chi tiết, thời gian thực hiện và thêm công việc vào danh sách quản lý.
+- **Chỉnh sửa công việc**: Người dùng có thể cập nhật thông tin công việc bất cứ lúc nào để đảm bảo thông tin chính xác.
+- **Xóa công việc**: Khi một công việc không còn cần thiết, người dùng có thể xóa khỏi danh sách.
+- **Đánh dấu hoàn thành**: Người dùng có thể đánh dấu công việc đã hoàn thành bằng cách nhấn vào biểu tượng ✅.
+- **Phân loại công việc theo danh mục**: Người dùng có thể tạo và quản lý danh mục công việc (Ví dụ: Cá nhân, Công việc, Học tập) giúp sắp xếp và ưu tiên nhiệm vụ hợp lý hơn.
+- **Ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng, ý tưởng nhanh mà không cần tạo công việc chi tiết.
+- **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi.
 
-### Trang chủ:
-![Trang chủ](./img/trangchu.jpg)
+## Structural Diagram 
+![Task Manager UML](img/TaskManager.drawio.png)
 
-### Tin tức:
-![Tin tức](./img/tintuc.jpg)
+## Công nghệ sử dụng
+- Ngôn ngữ lập trình: Dart
+- Framework: Flutter
+- Cơ sở dữ liệu: Firebase Firestore
 
-### Diễn đàn:
-![Diễn đàn](./img/diendan.jpg)
+## Hướng dẫn cài đặt
+1. Clone repository
+   ```sh
+   git clone https://github.com/ngnhonk/Nhom-02.git
+   ```
+2. Cài đặt dependencies
+   ```sh
+   flutter pub get
+   ```
+3. Chạy ứng dụng
+   ```sh
+   flutter run
+   ```
 
-### Tài khoản:
-![Tài khoản](./img/taikhoan.jpg)
+## Giao diện App 
+thêm giao diện 
 
-### Giao diện mô phỏng điện thoại android:
-![Android Emulator](./img/android_emu.png)
+## Hướng dẫn sử dụng
+- **Thêm công việc mới**: Nhấn "Create New Task" và nhập thông tin.
+- **Chỉnh sửa công việc**: Nhấn biểu tượng ✏️ bên cạnh công việc.
+- **Xóa công việc**: Nhấn biểu tượng 🗑️ để xóa.
+- **Hoàn thành công việc**: Nhấn vào biểu tượng ✅ để đánh dấu hoàn thành.
+- **Phân loại công việc**: Chọn danh mục khi tạo/chỉnh sửa công việc.
+- **Sticky Notes**: Thêm các ghi chú nhanh từ giao diện chính.
+
+## Hạn chế và đề xuất cải thiện
+- Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn.
+- Chưa có chế độ đồng bộ thời gian thực: Hiện tại, dữ liệu chỉ cập nhật khi tải lại trang hoặc có hành động thêm/sửa/xóa. Có thể sử dụng Firebase Realtime Database để cải thiện.
+- Thiếu hỗ trợ đa người dùng: Hiện tại, ứng dụng chỉ phục vụ một người dùng. Nếu muốn mở rộng, có thể thêm chức năng đăng nhập và lưu công việc theo từng tài khoản.
+
+
