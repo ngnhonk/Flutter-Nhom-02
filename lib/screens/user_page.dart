@@ -4,7 +4,21 @@ class UserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Login")),
+      appBar: AppBar(
+        title: const Padding(
+          padding: EdgeInsets.symmetric(vertical: 24.0),
+          child: Text(
+            'Login',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        elevation: 0,
+        backgroundColor: const Color(0xFF87CEFA),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Row(
