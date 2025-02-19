@@ -26,7 +26,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi
 
 ## Structural Diagram 
-![Task Manager UML](assets/TaskManager.drawio.png)
+![Task Manager UML](img/TaskManager.drawio.png)
 
 ## Công nghệ sử dụng
 - Ngôn ngữ lập trình: Dart
@@ -60,7 +60,9 @@ thêm giao diện
 - **Đăng nhập để lưu công việc**: Người dùng cần đăng nhập để đồng bộ dữ liệu trên nhiều thiết bị
 
 ## Hạn chế và đề xuất cải thiện
-- Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn.
-- Chưa có chế độ đồng bộ thời gian thực: Hiện tại, dữ liệu chỉ cập nhật khi tải lại trang hoặc có hành động thêm/sửa/xóa. Có thể sử dụng Firebase Realtime Database để cải thiện.
+- Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn
+- Hoàn thiện chức năng đăng ký, đăng nhập cho user
+- Thêm tính năng sắp xếp cho Notes và cá nhân hóa giao diện 
+
 
 
