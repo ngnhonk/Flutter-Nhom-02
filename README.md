@@ -28,6 +28,9 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 ## Structural Diagram 
 ![Task Manager UML](assets/TaskManager.drawio.png)
 
+## Sơ đò chức năng 
+![Task Manager UML](assets/images/sdcn.drawio.png)
+
 ## Công nghệ sử dụng
 - Ngôn ngữ lập trình: Dart
 - Framework: Flutter
@@ -48,7 +51,13 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
    ```
 
 ## Giao diện App 
-thêm giao diện 
+### Home
+![Home](assets/images/tasks.png)
+### Notes
+![Notes](assets/images/notes.png)
+## User
+![User](assets/images/user.png)
+ 
 
 ## Hướng dẫn sử dụng
 - **Thêm công việc mới**: Nhấn "Create New Task" và nhập thông tin
