@@ -25,7 +25,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Đăng nhập và cá nhân hóa dữ liệu**: Người dùng có thể đăng nhập để lưu trữ và đồng bộ công việc trên nhiều thiết bị
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi
 
-## Structural Diagram 
+## Sơ đồ cấu trúc 
 ![Task Manager UML](assets/TaskManager.drawio.png)
 
 ## Sơ đồ chức năng 
