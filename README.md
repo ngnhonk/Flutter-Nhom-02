@@ -36,7 +36,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 ## Hướng dẫn cài đặt
 1. Clone repository
    ```sh
-   git clone https://github.com/ngnhonk/Nhom-02.git
+   https://github.com/ngnhonk/Flutter-Nhom-02.git
    ```
 2. Cài đặt dependencies
    ```sh
