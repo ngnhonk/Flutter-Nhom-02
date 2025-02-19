@@ -26,7 +26,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi
 
 ## Structural Diagram 
-![Task Manager UML](assets/img/TaskManager.drawio.png)
+![Task Manager UML](assets/TaskManager.drawio.png)
 
 ## Công nghệ sử dụng
 - Ngôn ngữ lập trình: Dart
