@@ -28,7 +28,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 ## Structural Diagram 
 ![Task Manager UML](assets/TaskManager.drawio.png)
 
-## Sơ đò chức năng 
+## Sơ đồ chức năng 
 ![Task Manager UML](assets/images/sdcn.drawio.png)
 
 ## Công nghệ sử dụng
