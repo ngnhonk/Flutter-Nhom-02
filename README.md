@@ -21,6 +21,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Xóa công việc**: Khi một công việc không còn cần thiết, người dùng có thể xóa khỏi danh sách
 - **Đánh dấu hoàn thành**: Người dùng có thể đánh dấu công việc đã hoàn thành để dễ dàng theo dõi công việc
 - **Ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng hay ý tưởng nhanh chóng mà không cần tạo công việc chi tiết
+- **Sắp xếp công việc**: Người dùng có thể sắp xếp công việc theo thứ tự mong muốn như ngày tạo hay trạng thái hoàn thành của công việc, thuận tiện cho việc quản lý
 - **Đăng nhập và cá nhân hóa dữ liệu**: Người dùng có thể đăng nhập để lưu trữ và đồng bộ công việc trên nhiều thiết bị
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi
 
@@ -35,7 +36,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 ## Hướng dẫn cài đặt
 1. Clone repository
    ```sh
-   git clone https://github.com/ngnhonk/Nhom-02.git
+   https://github.com/ngnhonk/Flutter-Nhom-02.git
    ```
 2. Cài đặt dependencies
    ```sh
@@ -54,11 +55,14 @@ thêm giao diện
 - **Chỉnh sửa công việc**: Nhấn biểu tượng chỉnh sửa bên cạnh công việc
 - **Xóa công việc**: Nhấn biểu tượng thùng rác để xóa
 - **Hoàn thành công việc**: Nhấn vào dấu tích để đánh dấu hoàn thành
+- **Sắp xếp công việc**: Sử dụng "Sort by" sắp xếp theo ngày tạo, tên, trạng thái công việc
 - **Sticky Notes**: Thêm các ghi chú nhanh từ giao diện chính
 - **Đăng nhập để lưu công việc**: Người dùng cần đăng nhập để đồng bộ dữ liệu trên nhiều thiết bị
 
 ## Hạn chế và đề xuất cải thiện
-- Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn.
-- Chưa có chế độ đồng bộ thời gian thực: Hiện tại, dữ liệu chỉ cập nhật khi tải lại trang hoặc có hành động thêm/sửa/xóa. Có thể sử dụng Firebase Realtime Database để cải thiện.
+- Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn
+- Hoàn thiện chức năng đăng ký, đăng nhập cho user
+- Thêm tính năng sắp xếp cho Notes và cá nhân hóa giao diện 
+
 
 
