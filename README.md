@@ -21,7 +21,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Xóa công việc**: Khi một công việc không còn cần thiết, người dùng có thể xóa khỏi danh sách
 - **Đánh dấu hoàn thành**: Người dùng có thể đánh dấu công việc đã hoàn thành để dễ dàng theo dõi công việc
 - **Ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng hay ý tưởng nhanh chóng mà không cần tạo công việc chi tiết
-- **Sắp xếp công việc**: Cho phép người dùng có thể sắp xếp công việc theo thứ tự mong muốn như ngày tạo hay các công việc đã hoàn thành để thuận tiện cho việc quản lý
+- **Sắp xếp công việc**: Người dùng có thể sắp xếp công việc theo thứ tự mong muốn như ngày tạo hay các công việc đã hoàn thành để thuận tiện cho việc quản lý
 - **Đăng nhập và cá nhân hóa dữ liệu**: Người dùng có thể đăng nhập để lưu trữ và đồng bộ công việc trên nhiều thiết bị
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi
 
