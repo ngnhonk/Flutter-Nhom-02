@@ -66,20 +66,72 @@ class UserPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
 
-                  // Button Register
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      child: Text("Register"),
-                    ),
+                  // Row with three buttons
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.all(12),
+                                shape: CircleBorder(),
+                              ),
+                              child: Icon(Icons.app_registration, size: 30),
+                            ),
+                            SizedBox(height: 4),
+                            Text("Register"),
+                            SizedBox(height: 4),
+                            Text("Create an account", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.all(12),
+                                shape: CircleBorder(),
+                              ),
+                              child: Icon(Icons.lock_reset, size: 30),
+                            ),
+                            SizedBox(height: 4),
+                            Text("Forgot"),
+                            SizedBox(height: 4),
+                            Text("Recover password", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.all(12),
+                                shape: CircleBorder(),
+                              ),
+                              child: Icon(Icons.account_circle, size: 30),
+                            ),
+                            SizedBox(height: 4),
+                            Text("Google"),
+                            SizedBox(height: 4),
+                            Text("Sign in with Google", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
             SizedBox(width: 16),
 
-            // image
+            // Image
             Expanded(
               flex: 3,
               child: ClipRRect(
