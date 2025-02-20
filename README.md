@@ -20,8 +20,9 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Chỉnh sửa công việc**: Người dùng có thể cập nhật thông tin công việc bất cứ lúc nào để đảm bảo thông tin chính xác
 - **Xóa công việc**: Khi một công việc không còn cần thiết, người dùng có thể xóa khỏi danh sách
 - **Đánh dấu hoàn thành**: Người dùng có thể đánh dấu công việc đã hoàn thành để dễ dàng theo dõi công việc
-- **Ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng hay ý tưởng nhanh chóng mà không cần tạo công việc chi tiết
 - **Sắp xếp công việc**: Người dùng có thể sắp xếp công việc theo thứ tự mong muốn như ngày tạo hay trạng thái hoàn thành của công việc, thuận tiện cho việc quản lý
+- **Thêm ghi chú nhanh**: Cung cấp không gian để lưu trữ những thông tin quan trọng hay ý tưởng nhanh chóng
+- **Chỉnh sửa và xóa ghi chú**: Người dùng có thể cập nhật, chỉnh sửa hay xóa ghi chú khi không cần thiết
 - **Đăng nhập và cá nhân hóa dữ liệu**: Người dùng có thể đăng nhập để lưu trữ và đồng bộ công việc trên nhiều thiết bị
 - **Lưu trữ và truy xuất dữ liệu bằng Firebase**: Dữ liệu công việc và ghi chú được lưu trữ trên Firebase Firestore, giúp người dùng truy cập mọi lúc, mọi nơi
 
@@ -66,6 +67,8 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Hoàn thành công việc**: Nhấn vào dấu tích để đánh dấu hoàn thành
 - **Sắp xếp công việc**: Sử dụng "Sort by" sắp xếp theo ngày tạo, tên, trạng thái công việc
 - **Sticky Notes**: Thêm các ghi chú nhanh từ giao diện chính
+- **Chỉnh sửa ghi chú**: Nhấn biểu tượng chỉnh sửa bên cạnh ghi chú trên trang Nots để chỉnh sửa ghi chú
+- **Xóa ghi chú**: Nhấn vào biểu tượng thùng rác bên cạnh ghi chú cần xóa
 - **Đăng nhập để lưu công việc**: Người dùng cần đăng nhập để đồng bộ dữ liệu trên nhiều thiết bị
 
 ## Hạn chế và đề xuất cải thiện
