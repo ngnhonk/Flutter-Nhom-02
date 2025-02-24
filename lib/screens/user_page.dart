@@ -25,9 +25,9 @@ class UserPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 2,
+              flex: 4,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     "Welcome Back!",
@@ -66,64 +66,52 @@ class UserPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
 
-                  // Row with three buttons
+                  // Buttons with icons and labels
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Expanded(
-                        child: Column(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.all(12),
-                                shape: CircleBorder(),
+                      for (var button in [
+                        {'icon': Icons.app_registration, 'label': 'Register', 'sub': 'Create an account'},
+                        {'icon': Icons.lock_reset, 'label': 'Forgot', 'sub': 'Recover password'},
+                        {'icon': Icons.account_circle, 'label': 'Google', 'sub': 'Sign in with Google'},
+                      ])
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            children: [
+                              Container(
+                                height: 40,
+                                alignment: Alignment.center,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    shape: CircleBorder(),
+                                    padding: EdgeInsets.all(12),
+                                  ),
+                                  child: Icon(button['icon'] as IconData, size: 30),
+                                ),
                               ),
-                              child: Icon(Icons.app_registration, size: 30),
-                            ),
-                            SizedBox(height: 4),
-                            Text("Register"),
-                            SizedBox(height: 4),
-                            Text("Create an account", style: TextStyle(fontSize: 12, color: Colors.grey)),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.all(12),
-                                shape: CircleBorder(),
+                              Container(
+                                height: 20,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  button['label'] as String,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
                               ),
-                              child: Icon(Icons.lock_reset, size: 30),
-                            ),
-                            SizedBox(height: 4),
-                            Text("Forgot"),
-                            SizedBox(height: 4),
-                            Text("Recover password", style: TextStyle(fontSize: 12, color: Colors.grey)),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.all(12),
-                                shape: CircleBorder(),
+                              Container(
+                                height: 50,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  button['sub'] as String,
+                                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                              child: Icon(Icons.account_circle, size: 30),
-                            ),
-                            SizedBox(height: 4),
-                            Text("Google"),
-                            SizedBox(height: 4),
-                            Text("Sign in with Google", style: TextStyle(fontSize: 12, color: Colors.grey)),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
                     ],
                   ),
                 ],
@@ -133,7 +121,7 @@ class UserPage extends StatelessWidget {
 
             // Image
             Expanded(
-              flex: 3,
+              flex: 6,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.asset(
