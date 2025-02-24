@@ -21,7 +21,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         Container(
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           decoration: BoxDecoration(
@@ -78,7 +77,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-
         Expanded(
           child: Container(
             decoration: BoxDecoration(
@@ -186,14 +184,13 @@ class _HomePageState extends State<HomePage> {
                               icon: Icon(Icons.note_add),
                               onPressed: () => _createNewNote(context, task.id),
                             ),
-
                             IconButton(
                               icon: Icon(Icons.edit, color: Colors.blueAccent),
                               onPressed: () => _editTask(context, task),
                             ),
                             IconButton(
                               icon: Icon(Icons.delete, color: Colors.redAccent),
-                              onPressed: () => _taskService.deleteTask(task.id),
+                              onPressed: () => _confirmDelete(context, task.id),
                             ),
                             GestureDetector(
                               onTap: () => _taskService.toggleTaskCompletion(
@@ -280,6 +277,30 @@ class _HomePageState extends State<HomePage> {
           ],
         );
       },
+    );
+  }
+
+  // -------------------------- confirm delete task --------------------------
+  void _confirmDelete(BuildContext context, String taskId) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text("Delete Task"),
+        content: const Text("Are you sure you want to delete this task?"),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Cancel"),
+          ),
+          TextButton(
+            onPressed: () {
+              _taskService.deleteTask(taskId);
+              Navigator.pop(context);
+            },
+            child: const Text("Delete", style: TextStyle(color: Colors.red)),
+          ),
+        ],
+      ),
     );
   }
 
@@ -384,5 +405,4 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
-
 }
