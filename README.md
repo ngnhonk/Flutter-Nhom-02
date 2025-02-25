@@ -72,7 +72,7 @@ Task Manager là một ứng dụng quản lý công việc đơn giản, giúp 
 - **Đăng nhập để lưu công việc**: Người dùng cần đăng nhập để đồng bộ dữ liệu trên nhiều thiết bị
 
 ## Hạn chế và đề xuất cải thiện
-- Thiếu chức năng nhắc nhở: Có thể thêm thông báo nhắc nhở cho công việc sắp đến hạn
+- Thiếu chức năng nhắc nhở: Thêm thông báo nhắc nhở cho công việc sắp đến hạn
 - Hoàn thiện chức năng đăng ký, đăng nhập cho user
 - Thêm tính năng sắp xếp cho Notes và cá nhân hóa giao diện 
 
